@@ -7,7 +7,8 @@ class Division
 public:
     std::vector<int> division(int number_one, int number_two);
     std::vector<double> division(double number_one, double
-                                                     number_two);
+                                                        number_two);
+    string division(int numerator_one, int denominator_one, int numerator_two, int denominator_two);
 };
 
 std::vector<int> Division::division(int number_one, int number_two)
@@ -66,5 +67,11 @@ std::vector<double> Division::division(double number_one, double number_two)
         }
     }
 
-    return {quotient*1.0, number_one / number_two - quotient};
+    return {quotient * 1.0, number_one / number_two - quotient};
+}
+
+string Division::division(int numerator_one, int denominator_one, int numerator_two, int denominator_two)
+{
+
+    return std::to_string(numerator_one * denominator_two) + "/" + std::to_string(denominator_one * numerator_two);
 }
