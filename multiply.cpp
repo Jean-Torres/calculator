@@ -1,4 +1,5 @@
 #include <iostream>
+#include "tools.hpp"
 using namespace std;
 
 class Multiply
@@ -22,5 +23,5 @@ double Multiply::multiply(double number_one, double number_two)
 string Multiply::multiply(int numerator_one, int denominator_one, int numerator_two, int denominator_two)
 {
 
-    return std::to_string(numerator_one * numerator_two) + "/" + std::to_string(denominator_one * denominator_two);
+    return simplifyFractions((numerator_one * numerator_two), (denominator_one * denominator_two));
 }

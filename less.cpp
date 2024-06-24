@@ -1,4 +1,5 @@
 #include <iostream>
+#include "tools.hpp"
 using namespace std;
 
 class Less
@@ -27,5 +28,5 @@ string Less::less(int numerator_one, int denominator_one, int numerator_two, int
     int res_one = (denominator / denominator_one) * numerator_one;
     int res_two = (denominator / denominator_two) * numerator_two;
 
-    return std::to_string(res_one - res_two )+ "/" + std::to_string(denominator);
+    return simplifyFractions((res_one + res_two), denominator);
 }

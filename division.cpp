@@ -1,4 +1,5 @@
 #include <iostream>
+#include "tools.hpp"
 #include <vector>
 using namespace std;
 
@@ -73,5 +74,5 @@ std::vector<double> Division::division(double number_one, double number_two)
 string Division::division(int numerator_one, int denominator_one, int numerator_two, int denominator_two)
 {
 
-    return std::to_string(numerator_one * denominator_two) + "/" + std::to_string(denominator_one * numerator_two);
+    return simplifyFractions((numerator_one * denominator_two), (denominator_one * numerator_two));
 }

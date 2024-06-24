@@ -1,8 +1,12 @@
+/*Este main esta escrito para correr por fuera de la carpeta que lo contiene,
+    es decir elimine el "calculator/" si lo va a ejecutar al mismo nivel de los demas archivos*/
+
 #include <iostream>
 #include "calculator/sum.cpp"
 #include "calculator/less.cpp"
 #include "calculator/multiply.cpp"
 #include "calculator/division.cpp"
+#include "calculator/tools.cpp"
 using namespace std;
 
 int menu()

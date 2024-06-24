@@ -1,5 +1,7 @@
 #include <iostream>
+#include "tools.hpp"
 using namespace std;
+
 
 class Sum
 {
@@ -24,8 +26,12 @@ string Sum::sum(int numerator_one, int denominator_one, int numerator_two, int d
 
     int denominator = denominator_one != denominator_two ? denominator_one * denominator_two : denominator_one;
 
+    // cout << endl << denominator << endl;
+
     int res_one = (denominator / denominator_one) * numerator_one;
     int res_two = (denominator / denominator_two) * numerator_two;
 
-    return std::to_string(res_one + res_two )+ "/" + std::to_string(denominator);
+    cout << endl << res_one + res_two << endl;
+
+    return simplifyFractions((res_one + res_two), denominator);
 }
